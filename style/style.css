@@ -1,0 +1,294 @@
+:root{
+    --main-color:#cbcdcc;
+    --secondary-color: #3c3d3f;
+    --section-padding:100px;
+}
+/* start global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 0;
+}
+a{
+    font-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (max-width:767px){
+    .container{
+        width: 400px;   
+    }
+}
+@media (min-width:768px){
+    .container{
+        width: 750px;   
+    }
+}
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+.container .cont-left{
+    flex-basis: 40%;
+}
+.container .cont-right{
+    flex-basis: 60%;
+}
+.num-form{
+    padding-right: 50px;
+    grid-area: a1;
+}
+.num-form .num{
+    font-size: 60px;
+}
+.num-form .info{
+    margin-top: 150px;
+    transform: rotate(270deg);
+    width: 77px;
+    margin-left: -5px;
+    position: relative;
+}
+.num-form .info::before{
+    content: "";
+    border-right: 1px solid black;
+    position: absolute;
+    top: -41px;
+    left: 140px;
+    width: 3px;
+    height: 100px;
+    transform: rotate(90deg);
+}
+/* end global rules */
+/* start profile info */
+.profile-info{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--main-color);
+}
+.profile-info .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.profile-info .cont-left{
+    position: relative;
+}
+.profile-info .cont-left img{
+    width: 500px;
+    position: absolute;
+    top: 9px;
+    left: -68px;
+}
+@media (max-width:992px){
+    .profile-info .cont-left img{
+        position: relative;
+        top: -19px;
+        left: 133px;
+    }
+}
+@media (min-width:993px){
+    .profile-info .cont-left img{
+        width: 480px;
+        position: absolute;
+        top: 9px;
+        left: -111px;
+    }
+}
+.profile-info .cont-right .name {
+    padding-bottom: 50px;
+}
+.profile-info .cont-right .name span{
+    font-weight: bolder;
+}
+.profile-info .cont-right .name h1{
+    font-weight: normal;
+    font-size: 50px;
+}
+.profile-info .cont-right .text{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-areas: "a1 a2 a2 a2 a2 a2";
+}
+.num-form .info::before{
+    content: "";
+    border-right: 1px solid black;
+    position: absolute;
+    top: -41px;
+    left: 140px;
+    width: 3px;
+    height: 100px;
+    transform: rotate(90deg);
+}
+.profile-info .text .box{
+    grid-area: a2;
+}
+.profile-info .text .box p:first-child{
+    padding-bottom: 90px;
+    line-height: 2;
+}
+.profile-info .text .box .contact-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    line-height: 2;
+    gap: 0  40px;
+}
+.profile-info .text .box .contact-info a{
+    color: black;
+    position: relative;
+    border: 1px solid black;
+    padding: 0 20px;
+    margin-left: -20px;
+}
+.profile-info .text .box .contact-info span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+/* end profile info */
+/* start my skills */
+.my-skills {
+    background-color: var(--secondary-color);
+}
+.my-skills .container{
+    display: flex;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    color: white;
+    /* height: 100vh; */
+}
+.my-skills .cont-left{
+    display: flex;
+    width: 50%;
+}
+.my-skills .cont-left .num-form{
+    position: absolute;
+}
+.my-skills .cont-left .skills .prog{
+    height: 20px;
+    background-color: #7d7c81;
+    max-width: 100%;
+}
+.my-skills .cont-left .skills .prog span{
+    display: block;
+    position: relative;
+    height: 70%;
+    background-color: var(--main-color);
+    top: 3.5px;
+    left: 3px;
+}
+.my-skills .cont-left .skills .prog span::before{
+    content: attr(data-progress);
+    color: #7e7d82;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    justify-content: center;
+}
+.my-skills .cont-left .skills{
+    display: grid;
+    padding-top: 15px;
+    grid-template-rows: repeat(6, 100px);
+    margin-left: 150px;
+}
+.my-skills .cont-left .skills .prog-holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.my-skills .cont-left .num-form .info::before,
+.my-skills .cont-right .num-form .info::before{
+    background-color: white;
+    border-style: none;
+    width: 1px;
+}
+.my-skills .cont-left .skills .prog-holder h4{
+    font-weight: normal;
+}
+.my-skills .cont-right{
+    display: flex;
+    flex-wrap: wrap;
+}
+.my-skills .cont-right .num-form{
+    position: absolute;
+}
+.my-skills .cont-right .box{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 5px;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+.my-skills .cont-right .box .date{
+    flex: 1;
+}
+.my-skills .cont-right .box .date p{
+    width: 145px;
+    color: #5e5f61;
+}
+.my-skills .cont-right .box .date h4,
+.my-skills .cont-right .box .jop h4{
+    font-size: 20px;
+}
+.my-skills .cont-right .box .jop{
+    flex: 2;
+}
+.my-skills .cont-right .box .jop p{
+    color: #5e5f61;
+}
+/* end my skills */
+/* start experience */
+.experience{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #797f7f;
+    color: #c8cccb;
+}
+.experience .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.experience .container .num-form{
+    position: absolute;
+}
+.experience .container .num-form .info::before{
+    background-color: #c8cccb;
+    width: 1px;
+    border: none;
+}
+.experience .container .box{
+    margin-left: 150px;
+}
+.experience .container .box h4{
+    font-size: 20px;
+    padding-top: 5px;
+}
+.experience .container .box span{
+    padding: 0 10px;
+}
+.experience .container .box p:first-of-type{
+    padding-bottom: 20px;
+}
+.experience .container .box p:last-of-type{
+    padding-bottom: 50px;
+}
+/* end experience */
