@@ -93,6 +93,11 @@ body{
 .profile-info .cont-left{
     position: relative;
 }
+@media (max-width:992px){
+    .profile-info .cont-right{
+        flex-basis: 100%;
+    }
+}
 .profile-info .cont-left img{
     width: 500px;
     position: absolute;
@@ -173,11 +178,20 @@ body{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     color: white;
-    /* height: 100vh; */
+}
+@media (max-width:992px) {
+    .my-skills .container{
+        flex-direction: column;
+    }
 }
 .my-skills .cont-left{
     display: flex;
     width: 50%;
+}
+@media (max-width:992px) {
+    .my-skills .cont-left{
+        padding-bottom: 200px;
+    }
 }
 .my-skills .cont-left .num-form{
     position: absolute;
