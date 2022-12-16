@@ -153,15 +153,15 @@ body{
     gap: 0  40px;
 }
 .profile-info .text .box .contact-info a{
-    color: black;
+    color: rgb(0, 0, 156);
     position: relative;
-    border: 1px solid black;
     padding: 0 20px;
     margin-left: -20px;
 }
 .profile-info .text .box .contact-info span{
     font-weight: bold;
     text-transform: capitalize;
+    color: black;
 }
 /* end profile info */
 /* start my skills */
