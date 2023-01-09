@@ -163,7 +163,8 @@ body{
     position: relative;
     padding: 0 20px;
     margin-left: -20px;
-    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
 }
 .profile-info .text .box .contact-info span{
     font-weight: bold;
