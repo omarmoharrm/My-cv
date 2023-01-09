@@ -103,6 +103,7 @@ body{
     position: absolute;
     top: 9px;
     left: -68px;
+    transition: .6sec;
 }
 @media (max-width:992px){
     .profile-info .cont-left img{
@@ -162,6 +163,7 @@ body{
     position: relative;
     padding: 0 20px;
     margin-left: -20px;
+    width: fit-content;
 }
 .profile-info .text .box .contact-info span{
     font-weight: bold;
